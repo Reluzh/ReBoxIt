@@ -9,6 +9,7 @@ export interface User {
 }
 
 export interface Business {
+  dataAiHint: string;
   id: string;
   name: string;
   logoURL: string;
