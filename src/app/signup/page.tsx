@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { UserPlus, Apple, Users } from "lucide-react";
+import { UserPlus } from "lucide-react";
 
 export default function SignupPage() {
   return (
@@ -48,11 +48,9 @@ export default function SignupPage() {
 
           <div className="space-y-2">
             <Button variant="outline" className="w-full">
-              <Users className="mr-2 h-4 w-4" />
               Sign up with Google
             </Button>
             <Button variant="outline" className="w-full">
-              <Apple className="mr-2 h-4 w-4" />
               Sign up with Apple
             </Button>
           </div>

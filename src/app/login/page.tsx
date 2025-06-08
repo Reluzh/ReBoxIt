@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { Leaf, Apple, Users } from "lucide-react";
+import { Leaf } from "lucide-react";
 
 export default function LoginPage() {
   return (
@@ -45,11 +45,9 @@ export default function LoginPage() {
 
           <div className="space-y-2">
             <Button variant="outline" className="w-full">
-              <Users className="mr-2 h-4 w-4" />
               Sign in with Google
             </Button>
             <Button variant="outline" className="w-full">
-              <Apple className="mr-2 h-4 w-4" />
               Sign in with Apple
             </Button>
           </div>
