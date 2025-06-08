@@ -10,7 +10,7 @@ import { UserPlus } from "lucide-react";
 
 export default function SignupPage() {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-200px)] py-12">
+    <div className="flex items-center justify-center min-h-screen py-12">
       <Card className="w-full max-w-md shadow-soft-md">
         <CardHeader className="text-center">
           <UserPlus className="mx-auto h-12 w-12 text-primary mb-2" />
