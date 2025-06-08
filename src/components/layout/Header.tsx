@@ -20,7 +20,7 @@ export default function Header() {
         </Link>
         <nav className="flex items-center space-x-2 sm:space-x-4">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} legacyBehavior passHref>
+            <Link key={item.label} href={item.href} >
               <Button variant="ghost" className="hidden sm:inline-flex p-2 hover:bg-primary/10">
                 <item.icon size={20} className="mr-0 sm:mr-2" />
                 <span className="hidden sm:inline">{item.label}</span>
@@ -28,7 +28,7 @@ export default function Header() {
             </Link>
           ))}
            {navItems.map((item) => (
-            <Link key={`${item.label}-mobile`} href={item.href} legacyBehavior passHref>
+            <Link key={`${item.label}-mobile`} href={item.href} >
               <Button variant="ghost" size="icon" className="sm:hidden p-2 hover:bg-primary/10">
                 <item.icon size={24} />
                  <span className="sr-only">{item.label}</span>
