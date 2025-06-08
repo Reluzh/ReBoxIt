@@ -2,19 +2,22 @@
 import type { Business, Item, Order, Category, Review, User } from '@/types';
 import { Apple, Archive, Milk, Drumstick, Sandwich, Wheat, Carrot, ShoppingCart, Utensils } from 'lucide-react';
 
+const imagePaths = Array.from({ length: 19 }, (_, i) => `/assets/im${i + 1}.jpg`);
+const getRandomImagePath = () => imagePaths[Math.floor(Math.random() * imagePaths.length)];
+
 export const mockUsers: User[] = [
   {
     uid: 'user1',
     name: 'Alex Doe',
     email: 'alex.doe@example.com',
-    photoURL: 'https://placehold.co/100x100.png',
+    photoURL: getRandomImagePath(),
     address: '123 Green St, Foodville',
   }
 ];
 
 export const mockReviews: Review[] = [
-  { id: 'review1', userId: 'user1', userName: 'Alex D.', rating: 5, comment: 'Great deals and fresh food!', date: new Date(Date.now() - 86400000 * 2).toISOString() },
-  { id: 'review2', userId: 'user2', userName: 'Sarah P.', rating: 4, comment: 'Good selection, friendly staff.', date: new Date(Date.now() - 86400000 * 5).toISOString() },
+  { id: 'review1', userId: 'user1', userName: 'Alex D.', rating: 5, comment: 'Great deals and fresh food!', date: new Date(Date.now() - 86400000 * 2).toISOString(), userPhotoURL: getRandomImagePath() },
+  { id: 'review2', userId: 'user2', userName: 'Sarah P.', rating: 4, comment: 'Good selection, friendly staff.', date: new Date(Date.now() - 86400000 * 5).toISOString(), userPhotoURL: getRandomImagePath() },
 ];
 
 export const mockItems: Item[] = [
@@ -25,7 +28,7 @@ export const mockItems: Item[] = [
     description: 'A mix of fresh, seasonal vegetables nearing their best-before date. Perfect for stews or roasting.',
     originalPrice: 15.00,
     discountedPrice: 7.50,
-    imageURL: 'https://placehold.co/300x180.png',
+    imageURL: getRandomImagePath(),
     dataAiHint: 'vegetables box',
     tags: ['Popular', 'Healthy'],
     quantityAvailable: 5,
@@ -39,7 +42,7 @@ export const mockItems: Item[] = [
     description: 'Delicious sourdough bread, baked yesterday. Still great for toast or sandwiches.',
     originalPrice: 6.00,
     discountedPrice: 2.50,
-    imageURL: 'https://placehold.co/300x180.png',
+    imageURL: getRandomImagePath(),
     dataAiHint: 'artisan bread',
     tags: ['Bakery', 'New'],
     quantityAvailable: 10,
@@ -51,7 +54,7 @@ export const mockItems: Item[] = [
     description: 'Generous portion of our daily pasta special. Changes daily.',
     originalPrice: 18.00,
     discountedPrice: 9.00,
-    imageURL: 'https://placehold.co/300x180.png',
+    imageURL: getRandomImagePath(),
     dataAiHint: 'pasta dish',
     tags: ['Restaurant Meal', 'Comfort Food'],
     pickupTimeRange: { start: '7:00 PM', end: '8:00 PM' },
@@ -63,7 +66,7 @@ export const mockItems: Item[] = [
     description: 'A selection of fruits that are ripe and ready to eat.',
     originalPrice: 10.00,
     discountedPrice: 4.00,
-    imageURL: 'https://placehold.co/300x180.png',
+    imageURL: getRandomImagePath(),
     dataAiHint: 'fruit bag',
     tags: ['Healthy', 'Snack'],
     isFeatured: true,
@@ -75,7 +78,7 @@ export const mockItems: Item[] = [
     description: 'Freshly prepared salad components, ready to be mixed.',
     originalPrice: 12.00,
     discountedPrice: 5.00,
-    imageURL: 'https://placehold.co/300x180.png',
+    imageURL: getRandomImagePath(),
     dataAiHint: 'salad mix',
     tags: ['Healthy', 'Quick Meal'],
   },
@@ -85,8 +88,8 @@ export const mockBusinesses: Business[] = [
   {
     id: 'biz1',
     name: 'Green Grocer Market',
-    logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/400x200.png',
+    logoURL: getRandomImagePath(),
+    coverImageURL: getRandomImagePath(),
     dataAiHint: 'grocery storefront',
     type: 'grocery',
     rating: 4.5,
@@ -101,8 +104,8 @@ export const mockBusinesses: Business[] = [
   {
     id: 'biz2',
     name: 'Luigi\'s Italian Kitchen',
-    logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/400x200.png',
+    logoURL: getRandomImagePath(),
+    coverImageURL: getRandomImagePath(),
     dataAiHint: 'restaurant interior',
     type: 'restaurant',
     rating: 4.8,
@@ -117,8 +120,8 @@ export const mockBusinesses: Business[] = [
   {
     id: 'biz3',
     name: 'The Corner Store',
-    logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/400x200.png',
+    logoURL: getRandomImagePath(),
+    coverImageURL: getRandomImagePath(),
     dataAiHint: 'convenience store',
     type: 'grocery',
     rating: 4.2,
@@ -172,19 +175,19 @@ export const mockOrders: Order[] = [
 
 
 export const mockGroceryCategories: Category[] = [
-  { id: 'cat1', name: 'Fresh Produce', icon: Carrot, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'fresh vegetables' },
-  { id: 'cat2', name: 'Pantry Staples', icon: Archive, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'pantry items' },
-  { id: 'cat3', name: 'Dairy & Alternatives', icon: Milk, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'dairy products' },
-  { id: 'cat4', name: 'Meat & Seafood', icon: Drumstick, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'fresh meat' },
-  { id: 'cat5', name: 'Bakery', icon: Sandwich, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'bakery goods' },
-  { id: 'cat6', name: 'Ready Meals', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'ready meal' },
+  { id: 'cat1', name: 'Fresh Produce', icon: Carrot, imageURL: getRandomImagePath(), dataAiHint: 'fresh vegetables' },
+  { id: 'cat2', name: 'Pantry Staples', icon: Archive, imageURL: getRandomImagePath(), dataAiHint: 'pantry items' },
+  { id: 'cat3', name: 'Dairy & Alternatives', icon: Milk, imageURL: getRandomImagePath(), dataAiHint: 'dairy products' },
+  { id: 'cat4', name: 'Meat & Seafood', icon: Drumstick, imageURL: getRandomImagePath(), dataAiHint: 'fresh meat' },
+  { id: 'cat5', name: 'Bakery', icon: Sandwich, imageURL: getRandomImagePath(), dataAiHint: 'bakery goods' },
+  { id: 'cat6', name: 'Ready Meals', icon: Utensils, imageURL: getRandomImagePath(), dataAiHint: 'ready meal' },
 ];
 
 export const mockRestaurantCategories: Category[] = [
-  { id: 'rcat1', name: 'Italian', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'italian food' },
-  { id: 'rcat2', name: 'Mexican', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'mexican food' },
-  { id: 'rcat3', name: 'Asian', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'asian food' },
-  { id: 'rcat4', name: 'Cafe', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'cafe coffee' },
+  { id: 'rcat1', name: 'Italian', icon: Utensils, imageURL: getRandomImagePath(), dataAiHint: 'italian food' },
+  { id: 'rcat2', name: 'Mexican', icon: Utensils, imageURL: getRandomImagePath(), dataAiHint: 'mexican food' },
+  { id: 'rcat3', name: 'Asian', icon: Utensils, imageURL: getRandomImagePath(), dataAiHint: 'asian food' },
+  { id: 'rcat4', name: 'Cafe', icon: Utensils, imageURL: getRandomImagePath(), dataAiHint: 'cafe coffee' },
 ];
 
 
