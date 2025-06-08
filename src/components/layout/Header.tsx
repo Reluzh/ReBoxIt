@@ -16,11 +16,11 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 text-primary hover:opacity-80 transition-opacity">
           <Leaf size={28} />
-          <h1 className="text-2xl font-bold font-headline">Surplus Saver</h1>
+          <h1 className="text-2xl font-bold font-headline">ReBoxIt</h1>
         </Link>
         <nav className="flex items-center space-x-2 sm:space-x-4">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} >
+            <Link key={item.label} href={item.href}>
               <Button variant="ghost" className="hidden sm:inline-flex p-2 hover:bg-primary/10">
                 <item.icon size={20} className="mr-0 sm:mr-2" />
                 <span className="hidden sm:inline">{item.label}</span>
@@ -28,7 +28,7 @@ export default function Header() {
             </Link>
           ))}
            {navItems.map((item) => (
-            <Link key={`${item.label}-mobile`} href={item.href} >
+            <Link key={`${item.label}-mobile`} href={item.href}>
               <Button variant="ghost" size="icon" className="sm:hidden p-2 hover:bg-primary/10">
                 <item.icon size={24} />
                  <span className="sr-only">{item.label}</span>
