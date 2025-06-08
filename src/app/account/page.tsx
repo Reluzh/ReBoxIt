@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -67,10 +68,12 @@ export default function AccountPage() {
       </Card>
       
       <div className="text-center">
-        <Button variant="destructive" className="w-full sm:w-auto">
-          <LogOut className="mr-2 h-5 w-5" />
-          Log Out
-        </Button>
+        <Link href="/login" passHref>
+          <Button variant="destructive" className="w-full sm:w-auto">
+            <LogOut className="mr-2 h-5 w-5" />
+            Log Out
+          </Button>
+        </Link>
       </div>
     </div>
   );
