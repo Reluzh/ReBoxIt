@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ShoppingBasket, Home, Search, ClipboardList, User, Bell, Leaf } from 'lucide-react';
 
 const navItems = [
-  { href: '/', label: 'Home', icon: Home },
+  { href: '/home', label: 'Home', icon: Home },
   { href: '/browse', label: 'Browse', icon: Search },
   { href: '/groceries', label: 'Groceries', icon: ShoppingBasket },
   { href: '/orders', label: 'Orders', icon: ClipboardList },
@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="bg-card shadow-soft sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 text-primary hover:opacity-80 transition-opacity">
+        <Link href="/home" className="flex items-center gap-2 text-primary hover:opacity-80 transition-opacity">
           <Leaf size={28} />
           <h1 className="text-2xl font-bold font-headline">ReBoxIt</h1>
         </Link>
