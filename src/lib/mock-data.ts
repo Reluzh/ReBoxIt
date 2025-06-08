@@ -2,10 +2,11 @@
 import type { Business, Item, Order, Category, Review, User } from '@/types';
 import { Apple, Archive, Milk, Drumstick, Sandwich, Wheat, Carrot, ShoppingCart, Utensils } from 'lucide-react';
 
-const assetImagePaths = Array.from({ length: 19 }, (_, i) => `/assets/im${i + 1}.jpg`);
+const imageFiles = Array.from({ length: 19 }, (_, i) => `/assets/im${i + 1}.jpg`);
 let currentImageIndex = 0;
+
 const getDeterministicNextImage = () => {
-  const imagePath = assetImagePaths[currentImageIndex % assetImagePaths.length];
+  const imagePath = imageFiles[currentImageIndex % imageFiles.length];
   currentImageIndex++;
   return imagePath;
 };
