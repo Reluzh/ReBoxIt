@@ -1,3 +1,4 @@
+
 import type { Business, Item, Order, Category, Review, User } from '@/types';
 import { Apple, Archive, Milk, Drumstick, Sandwich, Wheat, Carrot, ShoppingCart, Utensils } from 'lucide-react';
 
@@ -24,7 +25,7 @@ export const mockItems: Item[] = [
     description: 'A mix of fresh, seasonal vegetables nearing their best-before date. Perfect for stews or roasting.',
     originalPrice: 15.00,
     discountedPrice: 7.50,
-    imageURL: 'https://placehold.co/300x200.png',
+    imageURL: 'https://placehold.co/300x180.png',
     dataAiHint: 'vegetables box',
     tags: ['Popular', 'Healthy'],
     quantityAvailable: 5,
@@ -38,7 +39,7 @@ export const mockItems: Item[] = [
     description: 'Delicious sourdough bread, baked yesterday. Still great for toast or sandwiches.',
     originalPrice: 6.00,
     discountedPrice: 2.50,
-    imageURL: 'https://placehold.co/300x200.png',
+    imageURL: 'https://placehold.co/300x180.png',
     dataAiHint: 'artisan bread',
     tags: ['Bakery', 'New'],
     quantityAvailable: 10,
@@ -50,7 +51,7 @@ export const mockItems: Item[] = [
     description: 'Generous portion of our daily pasta special. Changes daily.',
     originalPrice: 18.00,
     discountedPrice: 9.00,
-    imageURL: 'https://placehold.co/300x200.png',
+    imageURL: 'https://placehold.co/300x180.png',
     dataAiHint: 'pasta dish',
     tags: ['Restaurant Meal', 'Comfort Food'],
     pickupTimeRange: { start: '7:00 PM', end: '8:00 PM' },
@@ -62,7 +63,7 @@ export const mockItems: Item[] = [
     description: 'A selection of fruits that are ripe and ready to eat.',
     originalPrice: 10.00,
     discountedPrice: 4.00,
-    imageURL: 'https://placehold.co/300x200.png',
+    imageURL: 'https://placehold.co/300x180.png',
     dataAiHint: 'fruit bag',
     tags: ['Healthy', 'Snack'],
     isFeatured: true,
@@ -74,7 +75,7 @@ export const mockItems: Item[] = [
     description: 'Freshly prepared salad components, ready to be mixed.',
     originalPrice: 12.00,
     discountedPrice: 5.00,
-    imageURL: 'https://placehold.co/300x200.png',
+    imageURL: 'https://placehold.co/300x180.png',
     dataAiHint: 'salad mix',
     tags: ['Healthy', 'Quick Meal'],
   },
@@ -85,7 +86,7 @@ export const mockBusinesses: Business[] = [
     id: 'biz1',
     name: 'Green Grocer Market',
     logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/600x300.png',
+    coverImageURL: 'https://placehold.co/400x200.png',
     dataAiHint: 'grocery storefront',
     type: 'grocery',
     rating: 4.5,
@@ -101,7 +102,7 @@ export const mockBusinesses: Business[] = [
     id: 'biz2',
     name: 'Luigi\'s Italian Kitchen',
     logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/600x300.png',
+    coverImageURL: 'https://placehold.co/400x200.png',
     dataAiHint: 'restaurant interior',
     type: 'restaurant',
     rating: 4.8,
@@ -117,7 +118,7 @@ export const mockBusinesses: Business[] = [
     id: 'biz3',
     name: 'The Corner Store',
     logoURL: 'https://placehold.co/100x100.png',
-    coverImageURL: 'https://placehold.co/600x300.png',
+    coverImageURL: 'https://placehold.co/400x200.png',
     dataAiHint: 'convenience store',
     type: 'grocery',
     rating: 4.2,
@@ -171,19 +172,19 @@ export const mockOrders: Order[] = [
 
 
 export const mockGroceryCategories: Category[] = [
-  { id: 'cat1', name: 'Fresh Produce', icon: Carrot, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'fresh vegetables' },
-  { id: 'cat2', name: 'Pantry Staples', icon: Archive, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'pantry items' },
-  { id: 'cat3', name: 'Dairy & Alternatives', icon: Milk, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'dairy products' },
-  { id: 'cat4', name: 'Meat & Seafood', icon: Drumstick, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'fresh meat' },
-  { id: 'cat5', name: 'Bakery', icon: Sandwich, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'bakery goods' },
-  { id: 'cat6', name: 'Ready Meals', icon: Utensils, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'ready meal' },
+  { id: 'cat1', name: 'Fresh Produce', icon: Carrot, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'fresh vegetables' },
+  { id: 'cat2', name: 'Pantry Staples', icon: Archive, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'pantry items' },
+  { id: 'cat3', name: 'Dairy & Alternatives', icon: Milk, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'dairy products' },
+  { id: 'cat4', name: 'Meat & Seafood', icon: Drumstick, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'fresh meat' },
+  { id: 'cat5', name: 'Bakery', icon: Sandwich, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'bakery goods' },
+  { id: 'cat6', name: 'Ready Meals', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'ready meal' },
 ];
 
 export const mockRestaurantCategories: Category[] = [
-  { id: 'rcat1', name: 'Italian', icon: Utensils, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'italian food' },
-  { id: 'rcat2', name: 'Mexican', icon: Utensils, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'mexican food' },
-  { id: 'rcat3', name: 'Asian', icon: Utensils, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'asian food' },
-  { id: 'rcat4', name: 'Cafe', icon: Utensils, imageURL: 'https://placehold.co/200x150.png', dataAiHint: 'cafe coffee' },
+  { id: 'rcat1', name: 'Italian', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'italian food' },
+  { id: 'rcat2', name: 'Mexican', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'mexican food' },
+  { id: 'rcat3', name: 'Asian', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'asian food' },
+  { id: 'rcat4', name: 'Cafe', icon: Utensils, imageURL: 'https://placehold.co/200x120.png', dataAiHint: 'cafe coffee' },
 ];
 
 
@@ -192,3 +193,6 @@ export const getItemsByIds = (ids: string[]): Item[] => mockItems.filter(item =>
 export const getItemsByBusinessId = (businessId: string): Item[] => mockItems.filter(item => item.businessId === businessId);
 export const getItemById = (id: string): Item | undefined => mockItems.find(item => item.id === id);
 export const getUserById = (id: string): User | undefined => mockUsers.find(user => user.uid === id);
+
+
+    
